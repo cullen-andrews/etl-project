@@ -36,7 +36,7 @@ We chose the following two (2) .csv data sets:
 We cleaned the data sets which included: combining, dropping and reordering columns, extracting and creating new rows and merging data. We worked in a Jupyter Notebook and created dataframes with Pandas.
 <br>
 <br>
-We extracted the IMDB data into *imdb_df* and combined fields “Year,” changing "Year" from an integer to a string, and “Title” into one string field “year_title” in order to create a unique column in the dataframe, in case of duplicate movie titles.
+We extracted the IMDB data into <em>imdb_df</em> and combined fields “Year,” changing "Year" from an integer to a string, and “Title” into one string field “year_title” in order to create a unique column in the dataframe, in case of duplicate movie titles.
 <br>
 <br>
 We then created *imdb_stack_df* in order to separate a compiled list of actors. This new dataframe created a unique row for each actor in each movie (using Pandas '.stack' function). We then dropped an unnecessary column “level_1” that was created from the '.stack' function and then renamed “0” column to “Actor.” This table is used as our junction table when relating the tables between movie and actors in Postgres.
@@ -61,10 +61,10 @@ The ERD gave us a draft of the schema to use as reference.
 <br>
 <br>
 **STEPS NEEDED**
-To use our code:
-1.	if needed, download and install PGAdmin: https://www.pgadmin.org/download/
-2.	select pointyspiderdreams.ipynb to open the Jupyter Notebook file to view our code
-3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port
-4.  open PGAdmin and leave running in the background
-5.	run all code
-6.	you will be able to view the query results in the Jupyter Notebook file
+<br>To use our code:
+<br>1.	if needed, download and install PGAdmin: https://www.pgadmin.org/download/
+<br>2.	select pointyspiderdreams.ipynb to open the Jupyter Notebook file to view our code
+<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port
+<br>4.  open PGAdmin and leave running in the background
+<br>5.	run all code
+<br>6.	you will be able to view the query results in the Jupyter Notebook file
