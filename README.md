@@ -4,7 +4,7 @@
 ### Team Members: Kristy Anderson, Cullen Andrews, Kathy Gural, Erin Hislope
 <br>
 <br>
-## OVERVIEW
+### OVERVIEW
 <br>
 The purpose of the this project was to utilize our skills to extract data, transform it and load into a functioning database.
 <br>
@@ -21,7 +21,7 @@ schema.sql: generated from our ERD for reference
 queries.sql: sample queries
 <br>
 <br>
-## EXTRACT
+### EXTRACT
 <br>
 We chose the following two (2) .csv data sets:
 <br>
@@ -31,7 +31,7 @@ We chose the following two (2) .csv data sets:
 </ul>
 <br>
 <br>
-## TRANSFORM
+### TRANSFORM
 <br>
 We cleaned the data sets which included: combining, dropping and reordering columns, extracting and creating new rows and merging data. We worked in a Jupyter Notebook and created dataframes with Pandas.
 <br>
@@ -39,24 +39,24 @@ We cleaned the data sets which included: combining, dropping and reordering colu
 We extracted the IMDB data into <em>imdb_df</em> and combined fields “Year,” changing "Year" from an integer to a string, and “Title” into one string field “year_title” in order to create a unique column in the dataframe, in case of duplicate movie titles.
 <br>
 <br>
-We then created *imdb_stack_df* in order to separate a compiled list of actors. This new dataframe created a unique row for each actor in each movie (using Pandas '.stack' function). We then dropped an unnecessary column “level_1” that was created from the '.stack' function and then renamed “0” column to “Actor.” This table is used as our junction table when relating the tables between movie and actors in Postgres.
+We then created <em>imdb_stack_df</em> in order to separate a compiled list of actors. This new dataframe created a unique row for each actor in each movie (using Pandas '.stack' function). We then dropped an unnecessary column “level_1” that was created from the '.stack' function and then renamed “0” column to “Actor.” This table is used as our junction table when relating the tables between movie and actors in Postgres.
 <br>
 <br>
-Next, we created *actors_df* which is a dataframe of unique actors from the imdb_stack_df and then sorted alphabetically on actor field.
+Next, we created <em>actors_df</em> which is a dataframe of unique actors from the <em>imdb_stack_df</em> and then sorted alphabetically on actor field.
 <br>
 <br>
 Then, we read in the Streaming data and combined fields “Year,” changing "Year" from an integer to a string, and “Title” into one string field “year_title” in order to create a unique combination of year and title, in case of duplicate movie titles and also in order to match to the imdb_df, which we merge on next.
 <br>
 <br>
-Because the relationship between the *imdb_df* and *streaming_df* was one-to-one, we decided to merge them together in order to have one dataframe of complete data instead of two with several columns of repeating data. We used an inner join on *year_title* field.  This resulted in 231 movies.
+Because the relationship between the <em>imdb_df</em> and <em>streaming_df</em> was one-to-one, we decided to merge them together in order to have one dataframe of complete data instead of two with several columns of repeating data. We used an inner join on <em>year_title* field.  This resulted in 231 movies.
 <br>
 <br>
-Then, we created a new dataframe *merge_clean_df* where we renamed two columns, dropped 11 unneeded columns and reordered columns in order for our primary key column to be first. Then we renamed it to *movies_df*.
+Then, we created a new dataframe <em>merge_clean_df</em> where we renamed two columns, dropped 11 unneeded columns and reordered columns in order for our primary key column to be first. Then we renamed it to <em>movies_df</em>.
 <br>
 <br>
 ## LOAD
 <br>
-We generated an Entity Relationship Diagram (ERD) model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors_df which is a join table.
+    We generated an Entity Relationship Diagram (ERD) model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors_df which is a join table.
 The ERD gave us a draft of the schema to use as reference.
 <br>
 <br>
