@@ -7,8 +7,10 @@
 EXTRACT
 <br>
 For this project, we chose the following two (2) .csv data sets:
->	1000 Movies from 2006-2016 - https://www.kaggle.com/PromptCloudHQ/imdb-data which is a list of movies and their title, actors, year, director, etc.
->	Movies and their Streaming Services - https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney which is a list of movies and the streaming services on which they can be found.
+<br>
+-1000 Movies from 2006-2016 - https://www.kaggle.com/PromptCloudHQ/imdb-data which is a list of movies and their title, actors, year, director, etc.
+<br>
+-Movies and their Streaming Services - https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney which is a list of movies and the streaming services on which they can be found.
 <br>
 TRANSFORM
 <br>
@@ -35,6 +37,7 @@ merge_df
 LOAD
 <br>
 <em>the final database, tables/collections and why this was chosen</em>
+<br>
 ERD model includes two tables: merge_df (Movies and Streaming info combined) and actors_df (a list of unique actor names).
 Generating the ERD will draft the schema.sql.
 <br>
@@ -45,10 +48,15 @@ STEPS REQUIRED TO REPRODUCE OUR PROCESS:
 In our GitHub repository https://github.com/cullen-andrews/etl-project, please find:
 <br>
 **File/Folder Name = What Is It**
+<br>
 cullen.ipynb = our Jupyter Notebook ETL code
+<br>
 Resources folder = two .csv data files
+<br>
 ERD.png = our Entity Relationship Diagram
+<br>
 schema.sql = schema to load into PGAdmin
+<br>
 queries.sql = sample queries on how to use the data
 
 
