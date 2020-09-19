@@ -47,10 +47,7 @@ merge_clean_df
 We generated an Entity Relationship Diagram model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors which is a join table.
 The ERD gave us a draft of the schema to use as reference.
 <br>
-
 When running code to create the database, be sure to change to your postgres username and password and update with your current port.
-
-When creating the database in PGAdmin these tables will be related on the “actor” and "year_title" fields. This will allow the user to search for their favorite actor and return ant movies they are in. The user can also search streaming services. This might be useful if the user is trying to decide which streaming service to purchase and perhaps wanted to see which one has the most movies with actors you enjoy.
 <br><br>
 **STEPS REQUIRED TO REPRODUCE OUR PROCESS:**
 <br><br>
