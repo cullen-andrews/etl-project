@@ -4,15 +4,15 @@
 ### Team Members: Kristy Anderson, Cullen Andrews, Kathy Gural, Erin Hislope
 
 
-EXTRACT
+**EXTRACT**
 <br>
 For this project, we chose the following two (2) .csv data sets:
 <br>
 -1000 Movies from 2006-2016 - https://www.kaggle.com/PromptCloudHQ/imdb-data which is a list of movies and their title, actors, year, director, etc.
 <br>
 -Movies and their Streaming Services - https://www.kaggle.com/ruchi798/movies-on-netflix-prime-video-hulu-and-disney which is a list of movies and the streaming services on which they can be found.
-<br>
-TRANSFORM
+<br><br>
+**TRANSFORM**
 <br>
 We will need to clean the data sets which will include: combine and drop columns, extract and create new rows and merge data. We will work in a Jupyter Notebook and create dataframes with Pandas.
 <br><br>
@@ -34,7 +34,7 @@ streaming_df
 merge_df
 <br>8.	Merge imdb_df and streaming_df using an inner join, on year_title field, in order to have all complete data in one dataframe, resulted in 231 movies that have streamlining services data
 <br><br>
-LOAD
+**LOAD**
 <br>
 <em>the final database, tables/collections and why this was chosen</em>
 <br>
@@ -43,7 +43,7 @@ Generating the ERD will draft the schema.sql.
 <br>
 When importing into PGAdmin, we will relate these two tables on the “actor” field. This will allow the user to search for their favorite actor and find which streaming service their movies can be viewed on. This might be useful if the user is trying to decide which streaming service to purchase and perhaps wanted to see which one has the most movies with actors you enjoy.
 <br><br>
-STEPS REQUIRED TO REPRODUCE OUR PROCESS:
+**STEPS REQUIRED TO REPRODUCE OUR PROCESS:**
 <br><br>
 In our GitHub repository https://github.com/cullen-andrews/etl-project, please find:
 <br>
@@ -58,8 +58,8 @@ ERD.png = our Entity Relationship Diagram
 schema.sql = schema to load into PGAdmin
 <br>
 queries.sql = sample queries on how to use the data
-
-
+<br>
+<br>
 To view/use our data:
 1.	select cullen.ipynb to open the Jupyter Notebook file to view our beautiful code
 2.	download and install PGAdmin with this link https://www.pgadmin.org/download/
