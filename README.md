@@ -4,7 +4,7 @@
 ### Team Members: Kristy Anderson, Cullen Andrews, Kathy Gural, Erin Hislope
 <br>
 <br>
-### OVERVIEW
+<strong>OVERVIEW</strong>
 <br>
 The purpose of the this project was to utilize our skills to extract data, transform it and load into a functioning database.
 <br>
@@ -48,7 +48,7 @@ Next, we created <em>actors_df</em> which is a dataframe of unique actors from t
 Then, we read in the Streaming data and combined fields “Year,” changing "Year" from an integer to a string, and “Title” into one string field “year_title” in order to create a unique combination of year and title, in case of duplicate movie titles and also in order to match to the imdb_df, which we merge on next.
 <br>
 <br>
-Because the relationship between the <em>imdb_df</em> and <em>streaming_df</em> was one-to-one, we decided to merge them together in order to have one dataframe of complete data instead of two with several columns of repeating data. We used an inner join on <em>year_title* field.  This resulted in 231 movies.
+Because the relationship between the <em>imdb_df</em> and <em>streaming_df</em> was one-to-one, we decided to merge them together in order to have one dataframe of complete data instead of two with several columns of repeating data. We used an inner join on <em>year_title</em> field.  This resulted in 231 movies.
 <br>
 <br>
 Then, we created a new dataframe <em>merge_clean_df</em> where we renamed two columns, dropped 11 unneeded columns and reordered columns in order for our primary key column to be first. Then we renamed it to <em>movies_df</em>.
