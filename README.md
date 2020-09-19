@@ -8,7 +8,7 @@
 <br>
 The purpose of the this project was to utilize our skills to extract data, transform it and load into a functioning database.
 <br>
-### FILES and FOLDERS
+<strong>FILES and FOLDERS</strong>
 <br><br>
 pointyspiderdreams.ipynb: our Jupyter Notebook ETL code
 <br>
@@ -21,7 +21,7 @@ schema.sql: generated from our ERD for reference
 queries.sql: sample queries
 <br>
 <br>
-### EXTRACT
+<strong>EXTRACT</strong>
 <br>
 We chose the following two (2) .csv data sets:
 <br>
@@ -31,7 +31,7 @@ We chose the following two (2) .csv data sets:
 </ul>
 <br>
 <br>
-### TRANSFORM
+<strong>TRANSFORM</strong>
 <br>
 We cleaned the data sets which included: combining, dropping and reordering columns, extracting and creating new rows and merging data. We worked in a Jupyter Notebook and created dataframes with Pandas.
 <br>
@@ -54,7 +54,7 @@ Because the relationship between the <em>imdb_df</em> and <em>streaming_df</em> 
 Then, we created a new dataframe <em>merge_clean_df</em> where we renamed two columns, dropped 11 unneeded columns and reordered columns in order for our primary key column to be first. Then we renamed it to <em>movies_df</em>.
 <br>
 <br>
-## LOAD
+<strong>LOAD</strong>
 <br>
     We generated an Entity Relationship Diagram (ERD) model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors_df which is a join table.
 The ERD gave us a draft of the schema to use as reference.
@@ -64,7 +64,7 @@ The ERD gave us a draft of the schema to use as reference.
 <br>To use our code:
 <br>1.	if needed, download and install PGAdmin: https://www.pgadmin.org/download/
 <br>2.	select pointyspiderdreams.ipynb to open the Jupyter Notebook file to view our code
-<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port
+<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port (SEE IMAGE)
 <br>4.  open PGAdmin and leave running in the background
 <br>5.	run all code
 <br>6.	you will be able to view the query results in the Jupyter Notebook file
