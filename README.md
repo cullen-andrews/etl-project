@@ -64,7 +64,7 @@ In order to set up our link to the Postgres database, Terra and Geoff helped us 
 <br>To use our code:
 <br>1.	if needed, download and install PGAdmin: https://www.pgadmin.org/download/
 <br>2.	select pointyspiderdreams.ipynb to open the Jupyter Notebook file to view our code
-<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port ![ ](/Images/Postgres2.jpg)
+<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port <img src="Images/Postgres2.jpg" alt="Postgres">
 <br>4.  open PGAdmin and leave running in the background
 <br>5.	run all code
 <br>6.	you will be able to view the query results in the Jupyter Notebook file
