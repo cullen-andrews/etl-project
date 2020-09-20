@@ -8,17 +8,16 @@
 <br>
 The purpose of the this project was to utilize our skills to extract data, transform it and load into a functioning database.
 <br>
+<br>
 <strong>FILES and FOLDERS</strong>
 <br><br>
-pointyspiderdreams.ipynb: our Jupyter Notebook ETL code
-<br>
-Resources folder: two .csv data files - imdb-movie-data.csv and MoviesOnStreamingPlatforms_updated.csv
-<br>
-DatabaseDiagram.jpeg: our Entity Relationship Diagram
-<br>
-schema.sql: generated from our ERD for reference
-<br>
-queries.sql: sample queries
+<ul>
+    <li>pointy_spider_dreams.ipynb: our Jupyter Notebook ETL code</li>
+    <li>Resources folder: two .csv data files - imdb-movie-data.csv and MoviesOnStreamingPlatforms_updated.csv</li>
+    <li>DatabaseDiagram.jpeg: our Entity Relationship Diagram</li>
+    <li>schema.sql: generated from our ERD for reference</li>
+    <li>queries.sql: sample queries</li>
+</ul>
 <br>
 <br>
 <strong>EXTRACT</strong>
@@ -56,15 +55,16 @@ Then, we created a new dataframe <em>merge_clean_df</em> where we renamed two co
 <br>
 <strong>LOAD</strong>
 <br>
-    We generated an Entity Relationship Diagram (ERD) model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors_df which is a join table.
+We generated an Entity Relationship Diagram (ERD) model including three tables: movies_df (Movies and Streaming info combined), actors_df (a list of unique actor names) and movies_actors_df which is a join table.
 The ERD gave us a draft of the schema to use as reference.
 <br>
+In order to set up our link to the Postgres database, Terra and Geoff helped us with the code to create the database directly in the Jupyter Notebook.
 <br>
 **STEPS NEEDED**
 <br>To use our code:
 <br>1.	if needed, download and install PGAdmin: https://www.pgadmin.org/download/
 <br>2.	select pointyspiderdreams.ipynb to open the Jupyter Notebook file to view our code
-<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port (SEE IMAGE)
+<br>3.  in the code, under **LOAD**, be sure to update with your postgres username and password and your current port ![Postgres2.jpeg](images/Postgres2.jpeg)
 <br>4.  open PGAdmin and leave running in the background
 <br>5.	run all code
 <br>6.	you will be able to view the query results in the Jupyter Notebook file
